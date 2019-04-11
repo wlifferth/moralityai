@@ -31,6 +31,10 @@ def predict(text):
     else:
         return float(1 - prediction.payload[0].classification.score)
 
+def push_sample_to_firebase(sample):
+    result = db.child("samples").push(sample.get_firebase_dict())
+    return result["name"]
+
 @app.route("/", methods=["GET", "POST"])
 def home():
     context = defaultdict(lambda: "")
@@ -68,6 +72,7 @@ def register_prediction_feedback():
             else:
                 sample.label = 1
         sample.labeled = True
+        push_sample_to_firebase(sample)
         return jsonify(success=True)
 
 if __name__ == '__main__':
