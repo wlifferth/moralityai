@@ -9,6 +9,24 @@ body {
     padding: 10px;
 }
 
+h1 {
+    font-family: "Times New Roman", Georgia, Serif;
+    font-weight: bold;
+}
+
+.navbar {
+    box-shadow: none;
+}
+
+.navbar-toggler:focus, .navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+a {
+    color: white;
+}
+
 a:hover {
     cursor: pointer;
 }

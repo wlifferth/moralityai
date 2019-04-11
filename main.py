@@ -43,6 +43,12 @@ def home():
         context["sample"] = sample
     return render_template("home.html", context=context)
 
+
+@app.route("/about")
+def about():
+    context = defaultdict(lambda: "")
+    return render_template("about.html", context=context)
+
 @app.errorhandler(500)
 def server_error(e):
     logging.exception('An error occurred during a request.')
