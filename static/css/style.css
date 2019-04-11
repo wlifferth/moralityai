@@ -1,0 +1,213 @@
+body {
+    background: #67B26F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5ca2cd, #67B29F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5ca2cd, #67B29F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+body {
+    padding: 10px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.row {
+    padding: 20px;
+}
+
+
+#main-text-input, #main-text-input:focus {
+    border: none;
+    border-bottom: 5px solid white;
+    background-color: inherit;
+    outline: none;
+    font-size: 24px;
+    padding-bottom: 24px;
+    color: white;
+}
+
+.textarea-container {
+    position: relative;
+    width: 100%;
+}
+
+textarea, .textarea-size {
+    min-height: 25px;
+    font-family: sans-serif;
+    font-size: 24px;
+    padding: 4px;
+
+    overflow: hidden;
+    width: 100%;
+}
+
+textarea {
+    height: 100%;
+    position: absolute;
+    resize:none;
+    white-space: normal;
+}
+
+.textarea-size {
+    visibility: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+#main-form {
+    width: 100%;
+}
+
+.btn {
+    padding: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 20px;
+    border-radius: 30px;
+    background-color: white;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.75);
+    text-transform: none;
+}
+
+.red-btn {
+    color: red;
+}
+
+.green-btn {
+    color: green;
+}
+
+.result-holder {
+    background-color: white;
+    border-radius: 16px;
+    -webkit-box-shadow: 0px 2px 5px -5px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 2px 5px -5px rgba(0,0,0,0.45);
+    box-shadow: 0px 2px 5px -5px rgba(0,0,0,0.45);
+    color: black;
+    padding: 10px;
+    z-index: 1;
+}
+
+.sample-text {
+    font-weight: bold;
+    color:black;
+    font-family: "Times New Roman", Georgia, Serif;
+    display: inline-block;
+}
+
+.sample-text-extra-large {
+    font-size:30px;
+}
+
+.sample-text-large {
+    font-size:24px;
+}
+
+.sample-text-medium {
+    font-size:18px;
+}
+
+.sample-text-small {
+    font-size:14px;
+}
+
+.human_readable_moral_sentiment_label {
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.ask-for-feedback-text {
+    font-size:16px;
+    color: #e0e0e0;
+}
+
+.feedback-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    -webkit-box-shadow: 0px 2px 5px -5px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 2px 5px -5px rgba(0,0,0,0.45);
+    box-shadow: 0px 2px 5px -5px rgba(0,0,0,0.45);
+    color: black;
+    padding: 10px;
+    padding-top: 30px;
+    margin: 20px;
+    margin-top: -20px;
+}
+
+#positive-feedback {
+    padding: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 6px;
+    background-color: #92AF94;
+    color: white;
+    border-radius: 30px;
+    display: block;
+}
+
+#negative-feedback {
+    padding: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 6px;
+    background-color: #AC2C1B;
+    color: white;
+    border-radius: 30px;
+    display: block;
+}
+
+/*********************************************
+ * Modal Notification
+ *********************************************/
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        color: white;
+        position: relative;
+        z-index: 2;
+        background-color: #f44336;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 10px;
+        border-radius: 30px;
+        width: 80%; /* Could be more or less, depending on screen size */
+        max-width: 600px;
+    }
+
+    /* The Close Button */
+    .modal-close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        display: inline;
+    }
+
+    .modal-close:hover,
+    .modal-close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }

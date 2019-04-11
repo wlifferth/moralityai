@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10 offset-sm-1 col-md-10 offset-md-1">
+            <h1>MoralityAI</h1>
+            <form action="/" method="POST" id="main-form">
+                <div class="textarea-container">
+                    <textarea name="text" id="main-text-input" autofocus>{{ context["text"] }}</textarea>
+                    <div class="textarea-size"></div>
+                </div>
+                <div class="col-md-6 offset-md-3 text-center">
+                    <input type="submit" class="btn" value="Submit"></input>
+                </div>
+            </form>
+            {% if "sample" in context %}
+            <div class="result-holder row">
+                <div class="col-sm-12 col-md-8">
+                    <p class="sample-text {{ context["sample"].get_text_size_class() }}">“
+                    {{ context["sample"].text }}
+                    ”</p>
+                </div>
+                <div class="col-sm-12 col-md-4 text-center">
+                    <div class="text-center human_readable_moral_sentiment_label" style="background-color: {{ context["sample"].get_label_color() }};">    
+                        {{ context["sample"].get_human_readable_moral_sentiment_label() }}
+                    </div>
+                    <div class="text-center">
+                        {{ "{:0.4f}".format(context["sample"].prediction_score) }}
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-container row">
+                <input type="hidden" id="sample_id" name="sample_id" value="{{ context["sample"].id }}">
+                <input type="hidden" id="prev_sample_text" name="prev_sample_text" value="{{ context["sample"].text }}">
+                <input type="hidden" id="prev_sample_prediction" name="prev_sample_prediction" value="{{ context["sample"].prediction_score }}">
+                <div class="col-xs-12 col-sm-2 ask-for-feedback-text">
+                    <i>Did we get it right?</i>
+                </div>
+                <div class="col-xs-6 col-sm-5 text-center">
+                    <a href="#" class="btn" id="positive-feedback">
+                        Yup!
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-5 text-center">
+                    <a href="#" class="btn" id="negative-feedback">
+                        No :(
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div id="feedback-success-modal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="row">
+            <div class="col-xs-10 col-md-10"> <h2>Thanks for the feedback!</h2> </div>
+            <div class="col-xs-2 col-md-2 text-right modal-close">&times;</div>
+            <div class="col-xs-12 col-md-12"><p>Your phrase has now been labeled--now moralityAI will be able to learn from it!</p></div>
+    </div>
+</div>
+{% endblock %}
