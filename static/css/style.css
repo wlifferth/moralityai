@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-    font-family: "Times New Roman", Georgia, Serif;
+    font-family: "Lora", Georgia, Serif;
     font-weight: bold;
 }
 
@@ -116,7 +116,7 @@ textarea {
 .sample-text {
     font-weight: bold;
     color:black;
-    font-family: "Times New Roman", Georgia, Serif;
+    font-family: "Lora", Georgia, Serif;
     display: inline-block;
 }
 
