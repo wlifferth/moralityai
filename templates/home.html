@@ -17,9 +17,7 @@
             {% if "sample" in context %}
             <div class="result-holder row">
                 <div class="col-sm-12 col-md-8">
-                    <p class="sample-text {{ context["sample"].get_text_size_class() }}">“
-                    {{ context["sample"].text }}
-                    ”</p>
+                    <p class="sample-text {{ context["sample"].get_text_size_class() }}">“{{ context["sample"].text }}”</p>
                 </div>
                 <div class="col-sm-12 col-md-4 text-center">
                     <div class="text-center human_readable_moral_sentiment_label" style="background-color: {{ context["sample"].get_label_color() }};">    
