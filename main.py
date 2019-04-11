@@ -39,8 +39,9 @@ def push_sample_to_firebase(sample):
 def home():
     context = defaultdict(lambda: "")
     if request.method == "POST":
-        sample = Sample(request.form["text"], prediction_score=predict(request.form["text"]))
-        context["sample"] = sample
+        if request.form["text"] != "":
+            sample = Sample(request.form["text"], prediction_score=predict(request.form["text"]))
+            context["sample"] = sample
     return render_template("home.html", context=context)
 
 
