@@ -95,11 +95,11 @@ textarea {
 }
 
 .red-btn {
-    color: red;
+    background-color: red;
 }
 
 .green-btn {
-    color: green;
+    background-color: green;
 }
 
 .result-holder {
