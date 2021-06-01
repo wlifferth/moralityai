@@ -51,5 +51,5 @@ tb-nightly==1.14.0a20190301
 termcolor==1.1.0
 tf-estimator-nightly==1.14.0.dev2019030115
 uritemplate==3.0.0
-urllib3==1.24.1
+urllib3==1.26.5
 Werkzeug==0.15.2
